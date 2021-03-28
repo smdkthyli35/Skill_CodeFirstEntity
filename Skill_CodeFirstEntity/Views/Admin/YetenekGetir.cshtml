@@ -1,0 +1,36 @@
+﻿@model Skill_CodeFirstEntity.Models.Siniflar.YETENEKLER
+@{
+    ViewBag.Title = "YetenekGetir";
+    Layout = "~/Views/Shared/_LayoutNavbar.cshtml";
+}
+
+@using (Html.BeginForm("YetenekGuncelle", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.LabelFor(x => x.ID)
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
+        <br />
+
+        @Html.LabelFor(x => x.ACIKLAMA)
+        @Html.TextBoxFor(x => x.ACIKLAMA, new { @class = "form-control" })
+
+        <br />
+
+
+        @Html.LabelFor(x => x.DEGER)
+        @Html.TextBoxFor(x => x.DEGER, new { @class = "form-control" })
+
+        <br />
+
+
+    </div>
+
+    <div>
+        <button class="btn btn-success">Güncelle</button>
+
+    </div>
+
+
+}
